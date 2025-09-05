@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:0;padding:0;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{subject}}</title>
+  </head>
+  <body style="margin:0;padding:0;background:#f8f8f8;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#f8f8f8;">
+      <tr>
+        <td align="center" style="padding:20px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            
+            <!-- Header with GiftAI Branding -->
+            <tr>
+              <td style="background:linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);padding:40px 20px;text-align:center;">
+                <div style="margin-bottom:20px;">
+                  <div style="display:inline-block;width:80px;height:80px;background:#ffffff;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:32px;">🎁</div>
+                </div>
+                <div style="color:#ffffff;font-size:28px;font-weight:bold;margin-bottom:8px;">Welcome to GiftAI!</div>
+                <div style="color:#e8f4fd;font-size:16px;">Where AI meets thoughtful gifting</div>
+              </td>
+            </tr>
+            
+            <!-- Content -->
+            <tr>
+              <td style="padding:40px 30px;">
+                <!-- Personal Welcome -->
+                <div style="margin-bottom:30px;">
+                  <div style="font-size:20px;color:#333;font-weight:600;margin-bottom:12px;">Hello {{name}}! 👋</div>
+                  <div style="font-size:16px;color:#666;line-height:1.6;">{{welcome_message}}</div>
+                </div>
+
+                <!-- Feature Highlights -->
+                <div style="margin:30px 0;">
+                  <div style="font-size:18px;color:#333;font-weight:600;margin-bottom:20px;">What you can do with GiftAI:</div>
+                  
+                  <div style="margin-bottom:20px;padding:20px;background:#f8f9ff;border-radius:12px;border-left:4px solid #4ecdc4;">
+                    <div style="display:flex;align-items:flex-start;">
+                      <div style="font-size:24px;margin-right:15px;">🤖</div>
+                      <div>
+                        <div style="font-weight:600;color:#333;margin-bottom:5px;">AI-Powered Recommendations</div>
+                        <div style="font-size:14px;color:#666;line-height:1.5;">Get personalized gift suggestions based on recipient preferences, budget, and occasion.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="margin-bottom:20px;padding:20px;background:#fff8f0;border-radius:12px;border-left:4px solid #ff6b6b;">
+                    <div style="display:flex;align-items:flex-start;">
+                      <div style="font-size:24px;margin-right:15px;">🎯</div>
+                      <div>
+                        <div style="font-weight:600;color:#333;margin-bottom:5px;">Smart Gift Matching</div>
+                        <div style="font-size:14px;color:#666;line-height:1.5;">Our AI analyzes personality traits, interests, and past preferences to find the perfect gift.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="margin-bottom:20px;padding:20px;background:#f0f9ff;border-radius:12px;border-left:4px solid #45b7d1;">
+                    <div style="display:flex;align-items:flex-start;">
+                      <div style="font-size:24px;margin-right:15px;">📅</div>
+                      <div>
+                        <div style="font-weight:600;color:#333;margin-bottom:5px;">Occasion Reminders</div>
+                        <div style="font-size:14px;color:#666;line-height:1.5;">Never forget important dates! Get timely reminders for birthdays, anniversaries, and holidays.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Account Details (if provided) -->
+                {{#account_details}}
+                <div style="background:#f8f9fa;border:1px solid #e9ecef;border-radius:12px;padding:25px;margin:30px 0;">
+                  <div style="font-size:16px;color:#333;font-weight:600;margin-bottom:15px;">Your Account Details:</div>
+                  <div style="font-size:14px;color:#666;line-height:1.6;">
+                    <strong>Email:</strong> {{email}}<br>
+                    {{#username}}<strong>Username:</strong> {{username}}<br>{{/username}}
+                    <strong>Member since:</strong> {{signup_date}}<br>
+                    {{#subscription_plan}}<strong>Plan:</strong> {{subscription_plan}}{{/subscription_plan}}
+                  </div>
+                </div>
+                {{/account_details}}
+
+                <!-- Call to Action -->
+                <div style="text-align:center;margin:40px 0;">
+                  <div style="font-size:16px;color:#666;margin-bottom:25px;">Ready to find the perfect gift?</div>
+                  <a href="{{app_url}}" style="display:inline-block;background:linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);color:#ffffff;text-decoration:none;padding:16px 32px;border-radius:10px;font-weight:600;font-size:16px;box-shadow:0 4px 12px rgba(255,107,107,0.3);">Start Exploring GiftAI</a>
+                </div>
+
+                <!-- Getting Started Tips -->
+                {{#show_tips}}
+                <div style="background:#fff9e6;border:1px solid #ffd93d;border-radius:12px;padding:25px;margin:30px 0;">
+                  <div style="font-size:16px;color:#b8860b;font-weight:600;margin-bottom:15px;">💡 Getting Started Tips:</div>
+                  <div style="font-size:14px;color:#996633;line-height:1.6;">
+                    1. Complete your profile to get better recommendations<br>
+                    2. Add important dates to your calendar<br>
+                    3. Start with our gift finder quiz<br>
+                    4. Explore trending gift categories<br>
+                    5. Set up notification preferences
+                  </div>
+                </div>
+                {{/show_tips}}
+
+                <!-- Special Offer (if provided) -->
+                {{#special_offer}}
+                <div style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;color:#ffffff;">
+                  <div style="font-size:18px;font-weight:bold;margin-bottom:10px;">🎉 Special Welcome Offer!</div>
+                  <div style="font-size:14px;margin-bottom:20px;opacity:0.9;">{{offer_description}}</div>
+                  {{#offer_code}}
+                  <div style="background:rgba(255,255,255,0.2);border-radius:8px;padding:15px;margin:15px 0;">
+                    <div style="font-size:12px;margin-bottom:5px;">Use promo code:</div>
+                    <div style="font-size:20px;font-weight:bold;letter-spacing:2px;">{{offer_code}}</div>
+                  </div>
+                  {{/offer_code}}
+                  {{#offer_expires}}
+                  <div style="font-size:12px;opacity:0.8;">Expires: {{offer_expires}}</div>
+                  {{/offer_expires}}
+                </div>
+                {{/special_offer}}
+
+                <!-- Support Information -->
+                <div style="background:#f8f9fa;border-radius:12px;padding:25px;margin-top:30px;">
+                  <div style="font-size:16px;color:#333;font-weight:600;margin-bottom:15px;">Need Help?</div>
+                  <div style="font-size:14px;color:#666;line-height:1.6;">
+                    Our support team is here to help you make the most of GiftAI:<br><br>
+                    📧 Email: {{support_email}}<br>
+                    💬 Live Chat: Available in the app<br>
+                    📚 Help Center: {{help_center_url}}<br>
+                    🕒 Support Hours: {{support_hours}}
+                  </div>
+                </div>
+
+                <!-- Social Links -->
+                {{#social_links}}
+                <div style="text-align:center;margin:30px 0;">
+                  <div style="font-size:14px;color:#666;margin-bottom:15px;">Connect with us:</div>
+                  <div>
+                    {{#twitter_url}}<a href="{{twitter_url}}" style="display:inline-block;margin:0 10px;color:#1da1f2;text-decoration:none;font-size:24px;">🐦</a>{{/twitter_url}}
+                    {{#facebook_url}}<a href="{{facebook_url}}" style="display:inline-block;margin:0 10px;color:#1877f2;text-decoration:none;font-size:24px;">📘</a>{{/facebook_url}}
+                    {{#instagram_url}}<a href="{{instagram_url}}" style="display:inline-block;margin:0 10px;color:#e4405f;text-decoration:none;font-size:24px;">📷</a>{{/instagram_url}}
+                  </div>
+                </div>
+                {{/social_links}}
+              </td>
+            </tr>
+            
+            <!-- Footer -->
+            <tr>
+              <td style="background:#f8f9fa;padding:25px;text-align:center;border-top:1px solid #eee;">
+                <div style="font-size:12px;color:#888;line-height:1.5;">
+                  Welcome to the {{company}} family! - {{year}}<br>
+                  Sent on {{timestamp}}<br>
+                  {{#unsubscribe_url}}<a href="{{unsubscribe_url}}" style="color:#888;text-decoration:underline;">Unsubscribe</a> | {{/unsubscribe_url}}
+                  <a href="{{privacy_policy_url}}" style="color:#888;text-decoration:underline;">Privacy Policy</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "reset_password_example": {
+    "to": ["user@example.com"],
+    "from": "noreply@yourapp.com",
+    "subject": "Reset Your Password - Verification Code Inside",
+    "template_type": "resetpassword",
+    "data": {
+      "name": "John Doe",
+      "otp": "847362",
+      "message": "You requested a password reset for your account. Please use the verification code below to proceed with resetting your password.",
+      "otp_expiry_minutes": "15",
+      "reset_url": "https://yourapp.com/reset-password?token=abc123def456",
+      "company": "YourApp Inc.",
+      "support_email": "support@yourapp.com",
+      "additional_info": "If you didn't request this password reset, please ignore this email or contact our support team immediately.",
+      "unsubscribe_url": "https://yourapp.com/unsubscribe?token=xyz789"
+    }
+  },
+  
+  "welcome_giftai_example": {
+    "to": ["newuser@example.com"],
+    "from": "welcome@giftai.com",
+    "subject": "🎁 Welcome to GiftAI - Your AI Gift Assistant!",
+    "template_type": "welcome",
+    "data": {
+      "name": "Sarah Johnson",
+      "welcome_message": "We're absolutely thrilled to have you join our community of thoughtful gift-givers! GiftAI is here to make finding the perfect gift effortless and enjoyable.",
+      "email": "newuser@example.com",
+      "username": "sarah_j",
+      "signup_date": "January 15, 2024",
+      "subscription_plan": "Premium",
+      "app_url": "https://giftai.com/dashboard",
+      "show_tips": true,
+      "account_details": true,
+      "special_offer": true,
+      "offer_description": "Get 20% off your first AI-powered gift recommendation session!",
+      "offer_code": "WELCOME20",
+      "offer_expires": "February 15, 2024",
+      "support_email": "support@giftai.com",
+      "help_center_url": "https://help.giftai.com",
+      "support_hours": "Monday-Friday 9AM-6PM EST",
+      "social_links": true,
+      "twitter_url": "https://twitter.com/giftai",
+      "facebook_url": "https://facebook.com/giftaiapp",
+      "instagram_url": "https://instagram.com/giftai",
+      "company": "GiftAI",
+      "privacy_policy_url": "https://giftai.com/privacy",
+      "unsubscribe_url": "https://giftai.com/unsubscribe?email=newuser@example.com"
+    }
+  },
+
+  "custom_template_with_html": {
+    "to": ["customer@example.com"],
+    "from": "notifications@yourapp.com",
+    "subject": "Custom Notification",
+    "template_type": "custom",
+    "html_content": "<!DOCTYPE html><html><body><h1>Hello {{name}}!</h1><p>{{custom_message}}</p><p>Sent on {{timestamp}}</p></body></html>",
+    "data": {
+      "name": "Alex Smith",
+      "custom_message": "This is a custom email template with dynamic content."
+    }
+  },
+
+  "custom_template_with_file": {
+    "to": ["user@example.com"],
+    "from": "system@yourapp.com", 
+    "subject": "System Notification",
+    "template_type": "custom",
+    "template_id": "notification",
+    "data": {
+      "user_name": "Mike Wilson",
+      "notification_type": "Account Update",
+      "details": "Your account settings have been successfully updated."
+    }
+  },
+
+  "minimal_reset_password": {
+    "to": ["user@minimal.com"],
+    "from": "no-reply@minimal.com",
+    "subject": "Password Reset OTP",
+    "template_type": "resetpassword", 
+    "data": {
+      "name": "User",
+      "otp": "123456",
+      "message": "Your password reset code."
+    }
+  },
+
+  "minimal_welcome": {
+    "to": ["new@user.com"],
+    "from": "hello@giftai.com",
+    "subject": "Welcome!",
+    "template_type": "welcome",
+    "data": {
+      "name": "New User",
+      "welcome_message": "Welcome to GiftAI! We're excited to help you find amazing gifts."
+    }
+  }
+}
